@@ -5,10 +5,10 @@ account: jehangeer
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 10110815
-bundleId: 7771621
+bundleId: 7771702
 url: https://jehangeer.shinyapps.io/The-Cost-of-Cocaine-and-Heroin/
-when: 1696591254.48957
-lastSyncTime: 1696591254.48961
+when: 1696592342.63514
+lastSyncTime: 1696592342.63518
 asMultiple: FALSE
 asStatic: FALSE
 ignoredFiles: images/cocaine_and_herion_shiny_app.png|LICENSE|README.md
