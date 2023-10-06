@@ -20,14 +20,17 @@ server <- function(input, output, session) {
     
     hover_info <- lapply(1:nrow(filtered_data()), function(i) {
       year <- filtered_data()$year[i]
-      retail_price <- filtered_data()$retail_price[i]
+      price <- ifelse(input$price == "Retail", 
+                      sprintf("<b>%.2f</b>", filtered_data()$retail_price[i]), 
+                      sprintf("<b>%.2f</b>", filtered_data()$wholesale_price[i]))
       overall_avg <- overall_average()$average_price[i]
       paste(
         "<b>Year:", year, "</b><br>",
-        "<b>Retail Price: </b>", sprintf("<b>%.2f</b>", retail_price), "<br>",
+        "<b>", ifelse(input$price == "Retail", "Retail", "Wholesale"), " Price: </b>", price, "<br>",
         "<b>Overall Avg:</b> ", sprintf("<b>%.2f</b>", overall_avg)
       )
     })
+    
     
     
     
