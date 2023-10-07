@@ -22,7 +22,9 @@ ui <- fluidPage(
     
     # Plot
     mainPanel(
-      plotlyOutput("line_chart")
+      shinycssloaders::withSpinner(
+        plotlyOutput("line_chart")
+      )
     )
   )
 )
